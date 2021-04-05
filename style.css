@@ -1,0 +1,65 @@
+
+body {
+    background-image: url(img/ori.png);
+}
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    filter: drop-shadow(8px 8px 5px rgb(91, 91, 163));
+    color: rgb(6, 18, 71);
+    -webkit-text-stroke: 3px rgb(221, 212, 211);
+    text-shadow: 5px 8px 1px rgba(179, 231, 34, 0.4),
+                 4px 4px 20px rgba(73, 69, 68, 0.7),
+                 4px 4px 30px rgba(82, 50, 49, 0.4),
+                 4px 4px 40px rgba(219, 167, 164, 0.6)
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+}
+.gamb {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    transition: all .5s;
+    overflow: hidden;
+    cursor: pointer;
+}
+.gamb img {
+    width: 100%;
+}
+.gamb:hover {
+    margin-top: 5px;
+    transition: 0.5s;
+    opacity: .7;
+}
+.window {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(100, 100, 100, .4);
+    transition: all 0.7;
+}
+.window.buka {
+    pointer-events: all;
+    opacity: 1;
+}
+.window img {
+    width: 50%;
+}
+@media(max-width: 1100px) {
+    .window .fullGamb {
+        width: 60%;
+    }
+}
